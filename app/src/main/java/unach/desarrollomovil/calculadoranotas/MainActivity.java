@@ -1,7 +1,7 @@
 package unach.desarrollomovil.calculadoranotas;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -25,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
         calcular = findViewById(R.id.btCalcular);
 
-        calcular.setOnClickListener(view -> calcularNota());
+        calcular.setOnClickListener(view -> calcularPromedio());
     }
 
-    private void calcularNota() {
+    private void calcularPromedio() {
 
         if(nota1.getText().toString().isEmpty() ||
                 nota2.getText().toString().isEmpty() ||
@@ -44,18 +44,24 @@ public class MainActivity extends AppCompatActivity {
         double n3 = Double.parseDouble(nota3.getText().toString());
         double n4 = Double.parseDouble(nota4.getText().toString());
 
-        double finalNota = (n1*0.10) + (n2*0.20) + (n3*0.30) + (n4*0.40);
+        double promedio = (n1*0.10) + (n2*0.20) + (n3*0.30) + (n4*0.40);
+
+        // redondear a 1 decimal
+        promedio = Math.round(promedio * 10) / 10.0;
 
         String estado;
 
-        if(finalNota >= 51){
+        if(promedio >= 51){
             estado = "Aprobado";
         }else{
             estado = "Reprobado";
         }
 
-        Toast.makeText(this,
-                "Nota Final: "+finalNota+" - "+estado,
-                Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(MainActivity.this, ResultadoActivity.class);
+
+        intent.putExtra("promedio", promedio);
+        intent.putExtra("estado", estado);
+
+        startActivity(intent);
     }
 }
