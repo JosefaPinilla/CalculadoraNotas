@@ -7,37 +7,37 @@
     android:layout_height="match_parent"
     android:background="#63D5A1B6">
 
-    <TextView
-        android:id="@+id/titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calculadora de Notas"
-        android:textColor="#585149"
-        android:textSize="35sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintTop_toTopOf="parent"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="205dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="11dp"
+        android:src="@mipmap/ic_launcher_foreground"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="224dp"
-        android:layout_marginStart="41dp" />
+        app:layout_constraintTop_toBottomOf="@id/subtitulo" />
 
     <TextView
         android:id="@+id/subtitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="24dp"
         android:text="Josefa Pinilla Arias"
-        app:layout_constraintTop_toBottomOf="@id/titulo"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="20dp" />
+        app:layout_constraintTop_toBottomOf="@id/titulo" />
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="205dp"
-        android:layout_height="250dp"
-        android:src="@mipmap/ic_launcher_foreground"
-        app:layout_constraintTop_toBottomOf="@id/subtitulo"
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="215dp"
+        android:text="Calculadora de Notas"
+        android:textColor="#585149"
+        android:textSize="35sp"
+        android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="103dp"
-        android:layout_marginTop="36dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
