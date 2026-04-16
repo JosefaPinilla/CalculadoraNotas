@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="24dp"
         android:gravity="center">
@@ -16,33 +16,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ingrese las notas"
-            android:textColor="#5A534B"
+            android:text="Modificar Porcentajes"
             android:textSize="28sp"
             android:textStyle="bold"
-            android:layout_marginBottom="10dp"/>
-
-        <RadioGroup
-            android:id="@+id/grupoEscala"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="20dp">
-
-            <RadioButton
-                android:id="@+id/radio100"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Escala 1 - 100"
-                android:checked="true"/>
-
-            <RadioButton
-                android:id="@+id/radio7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Escala 1.0 - 7.0"/>
-
-        </RadioGroup>
+            android:textColor="#5A534B"
+            android:layout_marginBottom="20dp"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -57,66 +35,53 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/nota1"
+                    android:id="@+id/p1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nota 1"
+                    android:hint="Nota 1 (%)"
                     android:backgroundTint="#F2DA8A"
-                    android:inputType="numberDecimal"/>
+                    android:textColor="#5A534B"
+                    android:inputType="number"/>
 
                 <EditText
-                    android:id="@+id/nota2"
+                    android:id="@+id/p2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nota 2"
+                    android:hint="Nota 2 (%)"
                     android:backgroundTint="#F2DA8A"
-                    android:inputType="numberDecimal"/>
+                    android:textColor="#5A534B"
+                    android:inputType="number"/>
 
                 <EditText
-                    android:id="@+id/nota3"
+                    android:id="@+id/p3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nota 3"
+                    android:hint="Nota 3 (%)"
                     android:backgroundTint="#F2DA8A"
-                    android:inputType="numberDecimal"/>
+                    android:textColor="#5A534B"
+                    android:inputType="number"/>
 
                 <EditText
-                    android:id="@+id/nota4"
+                    android:id="@+id/p4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nota 4"
+                    android:hint="Nota 4 (%)"
                     android:backgroundTint="#F2DA8A"
-                    android:inputType="numberDecimal"/>
+                    android:textColor="#5A534B"
+                    android:inputType="number"/>
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <Button
-            android:id="@+id/btCalcular"
+            android:id="@+id/btGuardar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Guardar"
             android:layout_marginTop="20dp"
             android:backgroundTint="#F2DA8A"
-            android:text="Calcular Promedio"
             android:textColor="#5A534B"/>
 
-        <Button
-            android:id="@+id/btConfigurar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Modificar Porcentajes"/>
-
-        <ProgressBar
-            android:id="@+id/progreso"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="100"
-            android:progress="0"
-            android:visibility="gone"
-            android:layout_marginTop="10dp"/>
-
     </LinearLayout>
-
 </ScrollView>

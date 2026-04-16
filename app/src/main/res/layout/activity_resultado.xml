@@ -51,4 +51,38 @@
         android:visibility="gone"
         android:layout_marginTop="10dp"/>
 
+    <RatingBar
+        android:id="@+id/ratingApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btVolver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volver a calcular"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F2DA8A"
+        android:textColor="#5A534B"/>
+
+    <Button
+        android:id="@+id/btHistorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Historial"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#A1887F"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/btSalir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        android:backgroundTint="#E57373"
+        android:textColor="#FFFFFF"/>
+
 </LinearLayout>
