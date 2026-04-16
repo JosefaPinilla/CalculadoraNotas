@@ -36,7 +36,6 @@ public class ResultadoActivity extends AppCompatActivity {
         salir = findViewById(R.id.btSalir);
         volver = findViewById(R.id.btVolver);
 
-        // 🔥 NUEVO BOTÓN
         historial = findViewById(R.id.btHistorial);
 
         double promedio = getIntent().getDoubleExtra("promedio", 0);
