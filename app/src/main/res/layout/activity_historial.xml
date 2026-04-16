@@ -15,18 +15,53 @@
         android:textColor="#5A534B"
         android:layout_marginBottom="10dp"/>
 
+    <!-- TABLE HEADER -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2DA8A"
+        android:padding="6dp"
+        android:stretchColumns="0,1,2,3">
+
+        <TableRow>
+
+            <TextView
+                android:text="Nombre"
+                android:textStyle="bold"
+                android:textColor="#5A534B"/>
+
+            <TextView
+                android:text="Asignatura"
+                android:textStyle="bold"
+                android:textColor="#5A534B"/>
+
+            <TextView
+                android:text="Estado"
+                android:textStyle="bold"
+                android:textColor="#5A534B"/>
+
+            <TextView
+                android:text="Nota"
+                android:textStyle="bold"
+                android:textColor="#5A534B"/>
+
+        </TableRow>
+
+    </TableLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerHistorial"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"/>
 
     <Button
         android:id="@+id/btVolver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Volver a calcular"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:backgroundTint="#F2DA8A"
         android:textColor="#5A534B"/>
 
@@ -37,4 +72,5 @@
         android:text="Salir"
         android:backgroundTint="#E57373"
         android:textColor="#FFFFFF"/>
+
 </LinearLayout>
