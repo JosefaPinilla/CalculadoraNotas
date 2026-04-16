@@ -16,11 +16,33 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
             android:text="Ingrese las notas"
             android:textColor="#5A534B"
             android:textSize="28sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <RadioGroup
+            android:id="@+id/grupoEscala"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/radio100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Escala 1 - 100"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radio7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Escala 1.0 - 7.0"/>
+
+        </RadioGroup>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -38,7 +60,7 @@
                     android:id="@+id/nota1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nota 1 (10%)"
+                    android:hint="Nota 1"
                     android:backgroundTint="#F2DA8A"
                     android:inputType="numberDecimal"/>
 
@@ -46,7 +68,7 @@
                     android:id="@+id/nota2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nota 2 (20%)"
+                    android:hint="Nota 2"
                     android:backgroundTint="#F2DA8A"
                     android:inputType="numberDecimal"/>
 
@@ -54,7 +76,7 @@
                     android:id="@+id/nota3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nota 3 (30%)"
+                    android:hint="Nota 3"
                     android:backgroundTint="#F2DA8A"
                     android:inputType="numberDecimal"/>
 
@@ -62,7 +84,7 @@
                     android:id="@+id/nota4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nota 4 (40%)"
+                    android:hint="Nota 4"
                     android:backgroundTint="#F2DA8A"
                     android:inputType="numberDecimal"/>
 
@@ -77,7 +99,23 @@
             android:layout_marginTop="20dp"
             android:backgroundTint="#F2DA8A"
             android:text="Calcular Promedio"
-            android:textColor="#5A534B" />
+            android:textColor="#5A534B"/>
+
+        <Button
+            android:id="@+id/btConfigurar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modificar Porcentajes"/>
+
+        <ProgressBar
+            android:id="@+id/progreso"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"/>
 
     </LinearLayout>
 
